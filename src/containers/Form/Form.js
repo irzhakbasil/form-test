@@ -70,7 +70,7 @@ class Form extends Component {
         if (value.length < 1) formErrors.name = "Minimum 1 character required";
         if (value.length >= 1 && alphaRegex.test(value) != true)
           formErrors.name = "Should contain only characters";
-        if (value.length > 1 && alphaRegex.test(value)) formErrors.name = "";
+        if (value.length >= 1 && alphaRegex.test(value)) formErrors.name = "";
         break;
 
       case "adress":
@@ -78,7 +78,7 @@ class Form extends Component {
           formErrors.adress = "Minimum 1 character required";
         if (value.length >= 1 && alphanumRegex.test(value) != true)
           formErrors.adress = "Should contain characters and digits";
-        if (value.length > 1 && alphanumRegex.test(value))
+        if (value.length >= 1 && alphanumRegex.test(value))
           formErrors.adress = "";
 
         break;
